@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <!-- activar libreria bootstreap -->   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- fin activar libreria bootstreap --> 
+    <!-- libreria de los iconos asombrosos de fontawesome.com/ siempre va debajo de la libreria de booststrap -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- fin libreria de los iconos asombrosos de fontawesome.com/ -->
+    <!-- libreria de los css + google fonts/ -->
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <!-- fin libreria de los css + google fonts/ -->
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Germania+One|Indie+Flower|Monoton|Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+     <!-- barra -->
+             
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="registro.html">Registro</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+          </form>
+        </div>
+      </nav>
+<!-- barra -->
+
+
+
+
+<main>
+
+    <br><br><br><br><br>
+    <div class="container">
+      <h2><p>Ya tienes credenciales? ingresa aqui</p></h2>
+      <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Direccion de Email</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>        
+        <button type="button" class="btn btn-primary" onclick="validar1();">Entrar</button>
+      </form>    
+    </div>
+
+
+<br><br>
+<div class="container">
+  <hr align="center">
+</div>
+<br><br>
+    <div class="container">
+      <h2><p>Si no tienes credenciales para ingresar registrate aqui</p></h2>
+    <form >
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">Email</label>
+            <input type="email" class="form-control" id="inputEmail4" >
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputPassword4">Password</label>
+            <input type="password" class="form-control" id="inputPassword4" >
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputAddress">Direccion casa</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="cra 12a calle 12a - numero - interior " >
+        </div>
+        <div class="form-group">
+          <label for="inputAddress2">Direccion trabajo</label>
+          <input type="text" class="form-control" id="inputAddress2" placeholder="Campo opcional - cra 12a calle 12a - numero - interior ">
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputCity">Ciudad</label>
+            <input type="text" class="form-control" id="inputCity" >
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputState">Departamento</label>
+            <select id="inputState" class="form-control">
+              <option selected>Escoger...</option>
+              <option>Antioquia</option>
+              <option>Cundinamarca</option>
+              <option>Guajira</option>
+              <option>Risaralda</option>
+              <option>Quindio</option>
+
+            </select>
+          </div>
+          <div class="form-group col-md-2">
+            <label for="inputZip">Zip</label>
+            <input type="text" class="form-control" id="inputZip">
+          </div>
+        </div>       
+        <button type="button" class="btn btn-primary" onclick="validar2();">Registrarme</button>      
+      </div>
+      </form>
+<br><br><br>
+</main>
+
+<footer>      
+    <center><h3><a href="index.html" class="revisar">&nbsp;&nbsp;<i class="fas fa-chevron-circle-left"></i>&nbsp; Atras &nbsp;&nbsp;</a></h3></center>
+</footer>
+<br><br><br><br><br>
+<script>
+
+ var sw_validacion = 0, sw_validacion_email = 0, sw_validacion_zip = 0; 
+  function validar1()
+{
+    var val1, val2;
+
+    val1 = document.getElementById("exampleInputEmail1").value;    val2 = document.getElementById("exampleInputPassword1").value;
+    
+    //alert('el resultado de email es: ' + val1);    alert('el resultado de clave es: ' + val2);    
+
+    if (val1==null || val2==null || val1=='' || val2=='' )    
+      alert('Falta uno o varios campos');      
+    else
+      validarEmail(val1);    
+      
+}
+
+
+function validar2()
+{
+    valor1 = document.getElementById("inputEmail4").value; valor2 = document.getElementById("inputPassword4").value;
+    valor3 = document.getElementById("inputAddress").value; valor4 = document.getElementById("inputAddress2").value;
+    valor5 = document.getElementById("inputCity").value; valor6 = document.getElementById("inputState").value; 
+    valor7 = document.getElementById("inputZip").value;
+
+    //alert('el resultado de email es: ' + valor1);   alert('el resultado de clave es: ' + valor2);  alert('el resultado de direccion es: ' + valor3);   alert('el resultado de opcional es: ' + valor4);
+    //alert('el resultado de city es: ' + valor5);  alert('el resultado de estado es: ' + valor6);  alert('el resultado de zip es: ' + valor7);
+
+    if (valor1==null || valor2==null || valor3==null || valor5==null || valor6=="Escoger..." || valor7==null || valor1=='' || valor2=='' || valor3=='' || valor5=='' || valor7=='' ){
+      alert('Falta uno o varios campos');      
+      sw_validacion=0;
+    }
+    else
+    {
+      validarEmail(valor1);
+      validarZip(valor7);
+      sw_validacion=1;
+      alert('todos los campos: ' + sw_validacion + ' email: ' + sw_validacion_email + ' Zip' + sw_validacion_zip);      
+
+      if (sw_validacion == 1 && sw_validacion_email == 1 && sw_validacion_zip == 1) 
+          location.href = "https://google.com"
+    }
+  
+}
+
+function validarEmail(x) 
+{
+  validadordeEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;//esprexion que contiene el valor de un email valido
+  if (validadordeEmail.test(x))
+  {
+    //alert("La dirección de email " + x + " es correcta.");
+    sw_validacion_email=1;
+  } 
+  else 
+  {
+    alert("La dirección de email " + x + " es incorrecta.");
+    sw_validacion_email=0;
+  }
+}
+
+function validarZip(y) 
+{ 
+  if (isNaN(y)) 
+  {
+    alert ('El zip debe ser numero!');
+    sw_validacion_zip=0;
+  }
+  else{
+    sw_validacion_zip=1;
+  }
+  
+}
+</script>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
